@@ -4,40 +4,7 @@
 
 This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for front end web development and anything else.
 
-## Preferences
-
-- **Keyboard > Text >** Disable "Correct spelling automatically".
-- **Security and Privacy > Firewall >** On
-- **Security and Privacy > General >** App Store and identified developers
-- **File Sharing >** Off
-- **Users & Groups > Login Items >** Spectacle, Flux
-
-### Show Library folder
-
-```shell
-chflags nohidden ~/Library
-```
-
-### Show hidden files
-
-This can also be done by pressing `command` + `shift` + `.`.
-
-```shell
-defaults write com.apple.finder AppleShowAllFiles YES
-```
-
-### Show path bar
-
-```shell
-defaults write com.apple.finder ShowPathbar -bool true
-```
-
-### Show status bar
-
-```shell
-defaults write com.apple.finder ShowStatusBar -bool true
-```
-
+First install MacOS's missing installer ->
 ## Homebrew
 
 ```shell
@@ -63,66 +30,38 @@ touch Brewfile
 ```
 
 ```shell
-tap 'caskroom/cask'
-
-brew 'git'
-brew 'npm'
-
-cask 'brackets'
-cask 'flux'
+cask 'atom'
 cask 'firefox'
 cask 'gimp'
 cask 'google-chrome'
 cask 'opera'
 cask 'spectacle'
 cask 'sequel-pro'
-cask 'utorrent'
 cask 'vlc'
+cask 'virtualbox'
+cask 'libreoffice'
+cask 'imageoptim'
+cask 'appcleaner'
+cask 'the-unarchiver'
+cask 'teamviewer'
+cask 'cyberduck'
+cask 'transmission'
+cask 'Virtualbox'
+cask 'Libreoffice'
+cask 'imageoptim'
+cask 'dash'
+cask 'android-file-transfer'
+cask 'adapter'
+cask 'mamp'
 
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
+
+
+
 mas 'Slack', id: 803453959
-mas 'Sip', id: 507257563
-mas 'Simplenote', id: 692867256
-mas 'Todoist', id: 585829637
+
 ```
+Run ```brew bundle install``` in the same directory you have the ==brewfile== in
 
-## GitHub
-
-### Config - `~/.gitconfig`
-
-
-```shell
-[user]
-	name = First Last
-	email = email@email.com
-[github]
-	user = username
-[alias]
-	a = add
-	ca = commit -a
-	cam = commit -am
-	s = status
-	pom = push origin master
-	pog = push origin gh-pages
-	puom = pull origin master
-	puog = pull origin gh-pages
-	cob = checkout -b
-[credential]
-	helper = osxkeychain
-```
-
-
-## SSH
-
-### Config - `~./ssh/config`
-
-```shell
-Host example
-    HostName example.com
-    User example-user
-    IdentityFile key.pem
-```
 
 ### Generate SSH key
 
@@ -130,25 +69,31 @@ Host example
 ssh-keygen -t rsa -b 4096 -C "email@email.com"
 ```
 
+## SSH
+
+### Config - `~./ssh/config`
+
+```shell
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/XX_XXX
+```
+
 ## Bash
 
 ### Config - `~/.bash_profile`
 
+Found this alias to be beautiful.Thanks to **Tania Rascia**
+
 ```shell
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor;'
 ```
 
 ```shell
 source ~/.bash_profile
 ```
 
-### Terminal Colors
-
-```bash
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-```
 
 ## Node.js
 
@@ -168,11 +113,7 @@ nvm use node
 
 ## Node Package Manager
 
-### Gulp
 
-```shell
-npm install --global gulp-cli
-```
 
 ## Ruby Version Manager
 
@@ -187,6 +128,7 @@ npm install --global gulp-cli
 ```shell
 rvm install ruby-head
 ```
+==or==
 
 ```shell
 rvm --default use 2.4.0
