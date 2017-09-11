@@ -60,7 +60,7 @@ cask 'mamp'
 mas 'Slack', id: 803453959
 
 ```
-Run ```brew bundle install``` in the same directory you have the ==brewfile== in
+Run ```brew bundle install``` in the same directory you have the *brewfile* in
 
 
 ### Generate SSH key
@@ -128,7 +128,7 @@ nvm use node
 ```shell
 rvm install ruby-head
 ```
-==or==
+*or*
 
 ```shell
 rvm --default use 2.4.0
