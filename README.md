@@ -1,8 +1,8 @@
-# macOS Sierra v. 10.12 Setup 
+# macOS Sierra v. 10.12 Setup
 
-[View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) 
+[See Blog post here.](http://johnawotwi.me/setupmacos/)
 
-This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for front end web development.
+This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for front end web development and anything else.
 
 ## Preferences
 
@@ -82,8 +82,8 @@ cask 'vlc'
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Slack', id: 803453959
-mas 'Sip', id: 507257563 
-mas 'Simplenote', id: 692867256 
+mas 'Sip', id: 507257563
+mas 'Simplenote', id: 692867256
 mas 'Todoist', id: 585829637
 ```
 
@@ -195,4 +195,3 @@ rvm --default use 2.4.0
 ```shell
 gem install bundler
 ```
-
