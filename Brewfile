@@ -25,6 +25,7 @@ cask 'dash'
 cask 'android-file-transfer'
 cask 'adapter'
 cask 'mamp'
+cask 'etcher'
 
 
 mas 'Slack', id: 803453959
