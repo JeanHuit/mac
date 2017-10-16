@@ -1,6 +1,7 @@
 tap 'caskroom/cask'
 
 brew 'npm'
+brew 'sqlite'
 
 cask 'atom'
 cask 'firefox'
